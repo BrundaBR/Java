@@ -5,7 +5,7 @@ public class StackClass {
 		static ArrayList<Integer> list=new ArrayList<>();
 		
 		public static void push(int val) {
-		list.add(val);//inorder to push use add
+		list.add(val); //inorder to push use add
 		}
 		public static int pop() {
 			if(list.isEmpty()) {
@@ -19,13 +19,21 @@ public class StackClass {
 			int top=list.get(list.size()-1);
 			return top;
 		}
+		
+		public static int size() {
+			return list.size();
+		}
 	
 	}
 	public static void main(String[] args) {
 		Stack s=new Stack();
 		s.push(1);
 		s.push(2);
-		System.out.print(s.peek());
+		for(int i =0;i<=s.size();i++) {
+			System.out.print(s.peek());
+			s.pop();
+			
+		}
 	}
 
 }
